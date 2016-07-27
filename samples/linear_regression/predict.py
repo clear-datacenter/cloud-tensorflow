@@ -51,6 +51,7 @@ def main():
 
     protocol = "http"
     host = "127.0.0.1:5000"
+    #host = "192.168.99.100:31147"
     path = '%s://%s' % (protocol, host)
 
     request_body = json.dumps(instances)

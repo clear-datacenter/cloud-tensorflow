@@ -64,8 +64,9 @@ def train_on_cloud(job):
     print(
         "The train runs on cloud and you can checkout the model file in {}".format(
             job['output_path']))
+    # Use kubernetes, change to '/tmp/cloud-tensorflow/kubernetes_platform/run_train.sh'
     run_local_service_cmd = [
-        '/tmp/cloud-tensorflow/local_service/run_train.sh', job['output_path'],
+        '/tmp/cloud-tensorflow/local_platform/run_train.sh', job['output_path'],
         TAR_FILE, json.dumps(job, indent=2)
     ]
     run_train_job = subprocess.Popen(run_local_service_cmd, )

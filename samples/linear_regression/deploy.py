@@ -27,6 +27,7 @@ request = {'name': version, 'origin_uri': args.source}
 print(
     "Deploy the model and run inference service on the cloud, you can run `ps aux |grep run_deploy` to check service"
 )
+# Use kubernetes, change to '/tmp/cloud-tensorflow/kubernetes_platform/run_deploy.sh'
 run_local_service_cmd = ['/tmp/cloud-tensorflow/local_platform/run_deploy.py',
                          MODEL_NAME, version, args.source]
 run_deploy_job = subprocess.Popen(run_local_service_cmd, )

@@ -24,6 +24,14 @@ mv ./cloud-tensoflow/ /tmp/
 
 You need to setup [minikube](https://github.com/kubernetes/minikube) or Kubernetes cluster at first.
 
+```
+git clone https://github.com/tobegit3hub/cloud-tensorflow.git
+
+mv ./cloud-tensoflow/ /tmp/
+```
+
+Edit the `train.py` and `deploy.py` to run Kubernetes scripts and the platform will generate yaml files to Kubernetes.
+
 ## Usage
 
 ### Prepare Data
