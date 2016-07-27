@@ -98,16 +98,15 @@ if __name__ == "__main__":
 
     model = "mnist"
     version = "v1"
-    #source = "/tmp/mnist_160727_180616/model"
     source = "/tmp/mnist_160727_185504/model"
     if os.path.exists(source) == False:
         os.makedirs(source)
-    #checkpoint_files = ["checkpoint"]
-    #for file in checkpoint_files:
-    #    urllib.urlretrieve ("https://raw.githubusercontent.com/tobegit3hub/tensorflow_examples/master/checkpoint_files/{}".format(file), "/tmp/mnist_160727_180616/model/{}".format(file))
-    #checkpoint_files = ["export-50100-00000-of-00001", "export-50100.meta", "export-60100-00000-of-00001", "export-60100.meta", "export-70100-00000-of-00001", "export-70100.meta", "export-80100-00000-of-00001", "export-80100.meta", "export-90100-00000-of-00001", "export-90100.meta"]
-    #for file in checkpoint_files:
-    #    urllib.urlretrieve ("https://github.com/tobegit3hub/tensorflow_examples/blob/master/checkpoint_files/{}?raw=true".format(file), "/tmp/mnist_160727_180616/model/{}".format(file))
+    checkpoint_files = ["checkpoint"]
+    for file in checkpoint_files:
+        urllib.urlretrieve ("https://raw.githubusercontent.com/tobegit3hub/tensorflow_examples/master/checkpoint_files/{}".format(file), "/tmp/mnist_160727_185504/model/{}".format(file))
+    checkpoint_files = ["export-50100-00000-of-00001", "export-50100.meta", "export-60100-00000-of-00001", "export-60100.meta", "export-70100-00000-of-00001", "export-70100.meta", "export-80100-00000-of-00001", "export-80100.meta", "export-90100-00000-of-00001", "export-90100.meta"]
+    for file in checkpoint_files:
+        urllib.urlretrieve ("https://github.com/tobegit3hub/tensorflow_examples/blob/master/checkpoint_files/{}?raw=true".format(file), "/tmp/mnist_160727_185504/model/{}".format(file))
 
     # /tmp/mnist/v7/
     new_model_path = os.path.join("/tmp", model, version)
