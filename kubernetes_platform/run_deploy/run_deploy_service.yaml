@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: run-deploy
+  labels:
+    app: redis
+    role: master
+    tier: backend
+spec:
+  type: NodePort
+  ports:
+  - name: run-deploy
+    port: 5000
+  selector:
+    app: redis
+    role: master
+    tier: backend

@@ -8,4 +8,6 @@ set -e
 #JOB=$3
 
 
-kubectl create -f rendered.yaml
+kubectl create -f ./run_deploy/run_deploy_service.yaml
+
+kubectl create -f ./run_deploy/run_deploy_deployment.yaml
